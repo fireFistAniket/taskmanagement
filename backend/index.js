@@ -1,0 +1,23 @@
+import express from "express";
+import cors from "cors";
+import dotenv from "dotenv";
+import { connectDb } from "./utils/connectdb.js";
+import userRoutes from "./routes/userRoutes.js";
+import taskRoutes from "./routes/taskRoutes.js";
+import cookieParser from "cookie-parser";
+import { errorHandeler, notFound } from "./middleware/errorMiddleware.js";
+const PORT = process.env.PORT || 8088;
+const app = express();
+dotenv.config();
+connectDb();
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(cors({ credentials: true, origin: true }));
+app.use(cookieParser());
+app.use("/api/user", userRoutes);
+app.use("/api/task", taskRoutes);
+app.use(notFound);
+app.use(errorHandeler);
+app.listen(PORT, () => {
+  console.log(`Example app listening on port ${PORT}`);
+});

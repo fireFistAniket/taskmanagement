@@ -1,0 +1,125 @@
+.mainNav {
+  .mainNavContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vw 4vw;
+    .headLogo {
+      & > a {
+        font-size: 4vw;
+        line-height: 5vw;
+        display: flex;
+        align-items: last baseline;
+        font-weight: 500;
+        color: #61677a;
+        text-decoration: none;
+      }
+    }
+  }
+  .searchBox {
+    padding: 1vw 2vw;
+    border: none;
+    border-bottom: 1px solid #d8d9da;
+    outline: none;
+    &::placeholder {
+      text-transform: capitalize;
+    }
+  }
+  .profileLogo {
+    color: #61677a;
+    display: block;
+    height: 6vw;
+    width: 6vw;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    & > svg {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .profileDetailsModal {
+    position: fixed;
+    left: 0%;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 2.6vw;
+    backdrop-filter: blur(5px);
+    & > div {
+      display: flex;
+      align-items: center;
+      gap: 1.5vw;
+      & > button {
+        background: transparent;
+        border: none;
+        height: 3vw;
+        width: 3vw;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        & > svg {
+          height: 100%;
+          width: 100%;
+        }
+      }
+      & > h3 {
+        font-size: 4vw;
+        line-height: 5vw;
+        text-transform: capitalize;
+      }
+    }
+    & > div:nth-child(1) {
+      position: absolute;
+      right: 0%;
+      top: 0%;
+      & > button {
+        color: #61677a;
+        display: block;
+        background: transparent;
+        border: none;
+        height: 6vw;
+        width: 6vw;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        & > svg {
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+    & > div:nth-child(5) {
+      & > a {
+        height: auto;
+        width: auto;
+        text-decoration: none;
+        color: black;
+        font-size: 3vw;
+        line-height: 4vw;
+        font-weight: 500;
+        padding: 1.5vw 3vw;
+        background: #fff6e0;
+        border-radius: 1.5vw;
+        text-transform: capitalize;
+      }
+    }
+  }
+}
+@media (min-width: 641px) {
+  .mainNavContainer {
+    .headLogo {
+      & > a {
+        font-size: 2.5vw !important;
+        line-height: 3.5vw !important;
+      }
+    }
+    .profileLogo{
+      height: 4vw;
+      width: 4vw;
+    }
+  }
+}

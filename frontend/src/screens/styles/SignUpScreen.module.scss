@@ -1,0 +1,83 @@
+.SignUpScreen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 3vw;
+  & > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    & > label {
+      font-size: 4vw;
+      line-height: 5vw;
+      font-weight: 600;
+      padding: 1.5vw 3vw;
+      text-transform: capitalize;
+      color: #272829;
+      cursor: pointer;
+    }
+    & > input {
+      padding: 1.5vw 3vw;
+      font-size: 4vw;
+      line-height: 5vw;
+      border: #d8d9da;
+      outline: #d8d9da;
+      border-radius: 1.5vw;
+      &::placeholder {
+        text-transform: capitalize;
+        font-size: 3vw;
+        line-height: 4vw;
+      }
+    }
+    .signUpBtn {
+      padding: 1.5vw 3vw;
+      font-size: 3vw;
+      line-height: 4vw;
+      text-transform: capitalize;
+      font-weight: 600;
+      background: #fff6e0;
+      border: none;
+      border-radius: 1.5vw;
+      cursor: pointer;
+    }
+  }
+}
+.mainPage {
+  & > div {
+    margin: 5vw 6vw;
+    & > h3 {
+      text-align: center;
+      & > a {
+        color: black;
+        text-decoration: none;
+        text-transform: capitalize;
+      }
+    }
+  }
+}
+@media (min-width: 641px) {
+  .SignUpScreen {
+    & > div {
+      & > label {
+        font-size: 2vw;
+        line-height: 3vw;
+        padding: 0.5vw 1vw;
+      }
+      & > input {
+        font-size: 2vw;
+        line-height: 3vw;
+        padding: 0.5vw 1vw;
+        &::placeholder {
+          font-size: 2vw;
+          line-height: 3vw;
+        }
+      }
+    }
+    .signUpBtn {
+      padding: 0.5vw 1vw !important;
+      font-size: 2vw !important;
+      line-height: 3vw !important;
+    }
+  }
+}
